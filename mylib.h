@@ -13,7 +13,7 @@ double magnitude(double re, double im);
 void mandel(double *img, double re1, double re2, double im1, double im2,
 	    int nr, int ni, int NTRIALS=255);
 
-  int count3d(int n);
+double HSVolume(const int d, int N, int r);
   
 #ifdef EXTERNC
 }
