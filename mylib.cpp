@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include <cmath>
+
 
 // here we check if the flag EXTERNC is set, if it is then
 // we will tell the compiler to treat the code below a C code
@@ -74,6 +76,27 @@ void mandel(double *img, double re1, double re2, double im1, double im2,
     }
   }
 }
+
+
+double HSVolume(const int d, int N, int r){
+
+  int sum = 0;
+  
+  for (int i=0;i<N;i++){
+    double val = 0;
+    
+    for (int j=0;j<d;j++){
+      val += pow((drand48()*2*r-r),2);
+    };
+
+    if (val <= pow(r,2)){
+	sum += 1;
+      };
+  };
+
+  return sum*pow((2*r),d)/N;
+
+};
 
   
 

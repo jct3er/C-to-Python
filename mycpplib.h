@@ -41,5 +41,17 @@ class Mandel{
   double *_img;  // image buffer
 };
 
+int count3d(int n){
+  int counts = 0;
+  for (int i=0;i<n;i++){
+    for (int j=0;j<n;j++){
+      for (int k=0;k<n;k++){
+	counts++;
+      };
+    };
+  };
+  return counts;
+};
+
   
 #endif // block to ensure header is only compiled once

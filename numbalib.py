@@ -53,3 +53,16 @@ def mandel(img, re1, re2, im1, im2, nr, ni, NTRIALS=255):
         for i in range(nr):
             re=re1+i*dx
             img[j][i]=mandel_test(re,im,NTRIALS)
+
+            
+            
+
+# count3d function
+@jit(nopython=True)
+def count3d(n):
+    count=0
+    for i in range (n):
+        for j in range (i+1,n):
+            for k in range (j+1,n):
+                count = count +1
+    return count

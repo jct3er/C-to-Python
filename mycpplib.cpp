@@ -64,3 +64,6 @@ Mandel::~Mandel(){
   if (_img) delete [] _img;
 }
 
+
+
+
